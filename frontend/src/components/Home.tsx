@@ -5,6 +5,7 @@ const apiUrl = process.env.REACT_APP_API_URL;
 
 const Home: React.FC = () => {
   return (
+    <>
     <div className="overAllcontent">
       <div className="container">
         <div className="d-flex align-items-center py-4 justify-content-center flex-column">
@@ -23,6 +24,7 @@ const Home: React.FC = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 

@@ -1,10 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
+import './assets/css/nucleo-icons.css';
+import './assets/css/nucleo-svg.css';
+import './assets/css/material-dashboard.css?v=3.1.0';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@mui/icons-material';
+
+import 'material-design-icons/iconfont/material-icons.css';
+
+
 
 
 

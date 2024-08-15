@@ -90,18 +90,18 @@ router.post('/register', upload.single('profileImage'), [
 
 // src/routes/routes.ts
 router.post('/login', [
-    body('username').notEmpty().withMessage('Username field is required'),
+    body('email').notEmpty().withMessage('Email field is required'),
     body('password').notEmpty().withMessage('Password field is required')
 ], async (req: Request, res: Response) => {
     const errors = validationResult(req);
-    const { username, password } = req.body;
+    const { email, password } = req.body;
 
     if (!errors.isEmpty()) {
         return res.status(400).json({ errors: errors.array() });
     }
 
     try {
-        const user = await User.findOne({ username });
+        const user = await User.findOne({ email });
         if (!user) return res.status(401).send('Invalid credentials');
 
         const match = await bcrypt.compare(password, user.password);

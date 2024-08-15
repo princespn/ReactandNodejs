@@ -6,6 +6,7 @@ import passport from "passport";
 import cors from "cors";  // Added CORS middleware
 import routes from "./routes/users";
 import categories from "./routes/categories";
+import products from "./routes/products";
 
 dotenv.config();
 
@@ -60,5 +61,6 @@ app.use(express.urlencoded({ extended: true }));
 // Routes
 app.use('/api', routes);
 app.use('/api/categories', categories);
+app.use('/api/products', products);
 
 export default app;

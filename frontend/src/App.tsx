@@ -3,14 +3,20 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
 import Register from './components/Register';
 import Home from './components/Home';
+import Dashboard from './components/dashboard';
+import Products  from './components/Products';
+import Category from './components/Category';
 
 function App() {
   return (
     <Router>
       <Routes>
-      <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
+        <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/category" element={<Category />} />
       </Routes>
     </Router>
   );
